@@ -4,5 +4,5 @@
 
 ### Leo Donati - 2025
 
-#### MMI-2 : exemple de lecture de fichier en kotlin
+#### MMI-2 : exemples de lecture de fichier en kotlin
 
