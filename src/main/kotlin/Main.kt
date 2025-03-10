@@ -7,9 +7,17 @@ import java.io.LineNumberReader
 
 fun main() {
 
+    //Version sans try/catch
+    File("src/main/resources/fichier.txt").bufferedReader().use {
+        it.lineSequence().forEach {
+                line -> println(line)
+        }
+    }
+
+    /*
     //Version avec flow et forEach
     try {
-        File("src/main/resources/fichier.txt").bufferedReader().use {
+        File("src/main/resources/ficher.txt").bufferedReader().use {
             it.lineSequence().forEach {
                 line -> println(line)
             }
@@ -17,7 +25,7 @@ fun main() {
     } catch (e: IOException) {
         e.printStackTrace()
     }
-
+*/
 
     /*
     // Version avec File et BufferedReader (référencé par it)
@@ -52,7 +60,8 @@ fun main() {
     }
     */
 
-    /* //Version Java Like sans ARM
+    /*
+    //Version Java Like sans ARM
     try {
         val fileReader = FileReader("src/main/resources/fichier.txt")
         val reader = LineNumberReader(fileReader)
@@ -66,5 +75,5 @@ fun main() {
     catch (e: IOException) {
         e.printStackTrace()
     }
-     */
+    */
 }
